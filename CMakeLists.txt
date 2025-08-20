@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 3.21)
 
-add_executable(exc3l-matrix-editor
-    finaleprova.cpp
-)
+project(exc3l-matrix-editor LANGUAGES CXX)
 
-# xlnt via vcpkg or system install providing a CMake config file
-find_package(xlnt CONFIG REQUIRED)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-target_link_libraries(exc3l-matrix-editor PRIVATE xlnt::xlnt)
-target_compile_features(exc3l-matrix-editor PRIVATE cxx_std_17)
+add_subdirectory(poseidone/zues_x01)
 
 
